@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avinash Jha | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Avinash Jha</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2 class="animate-fade">Hello, I'm <span>Avinash</span></h2>
+      <p class="animate-slide">A Developer passionate about AI, Web & DSA 🚀</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a developer with strong skills in web development, Data Structures & Algorithms,
+      and Artificial Intelligence. I love building meaningful projects that make a difference.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-cards">
+      <div class="card">
+        <h3>Saarthi AI</h3>
+        <p>An AI-based learning platform with subject-wise resources, quizzes,
+          chatbot integration, and ML-powered recommendation engine.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>A modern personal portfolio showcasing my projects and skills, built
+          with clean HTML, CSS & animations.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Let's collaborate or just have a chat!</p>
+    <a href="mailto:yourmail@example.com" class="btn">Email Me</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Avinash Jha | Built with ❤️</p>
+  </footer>
+
+  <script>
+    // Smooth scroll animations
+    const elements = document.querySelectorAll(".animate-fade, .animate-slide");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.3 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
