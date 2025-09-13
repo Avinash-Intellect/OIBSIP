@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Wanderly — Travel Experiences</title>
+<meta name="description" content="Wanderly — stylish dark travel landing page with animated hero, destinations, packages and contact form." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav" role="navigation" aria-label="Primary">
+    <div class="brand" aria-hidden="false">
+      <div class="logo" aria-hidden="true">W</div>
+      <div class="brand-text">Wanderly</div>
+    </div>
+
+    <nav aria-label="Primary Links">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-panel">
+      <button class="menu-toggle" id="hamburger" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+    </div>
+  </div>
+</header>
+
+<nav id="mobileMenu" aria-hidden="true" style="display:none; position:fixed; inset:72px 20px auto 20px; z-index:70;">
+  <div style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:12px; border-radius:12px;">
+    <a href="#hero" style="display:block;padding:10px 8px;color:var(--muted)">Home</a>
+    <a href="#destinations" style="display:block;padding:10px 8px;color:var(--muted)">Destinations</a>
+    <a href="#packages" style="display:block;padding:10px 8px;color:var(--muted)">Packages</a>
+    <a href="#about" style="display:block;padding:10px 8px;color:var(--muted)">About</a>
+    <a href="#contact" style="display:block;padding:10px 8px;color:var(--muted)">Contact</a>
+  </div>
+</nav>
+
+<main id="hero" class="hero">
+  <div class="visual" aria-hidden="true">
+    <video id="heroVideo" playsinline muted loop autoplay preload="metadata" poster="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=60">
+      <source src="video.mp4" type="video/mp4">
+      </video>
+    <div class="overlay"></div>
+  </div>
+
+  <div class="hero-left">
+    <div class="eyebrow reveal">DISCOVER • EXPLORE • RESET</div>
+    <h1 class="reveal">Adventure awaits <span class="type" id="typewriter" aria-hidden="true"></span></h1>
+    <p class="lead reveal">Handcrafted travel experiences — sustainable, immersive, and unforgettable. Pick a destination, choose a mood, and we'll curate the trip.</p>
+    <div class="cta-row reveal">
+      <button class="btn" id="exploreBtn">Explore Now</button>
+      <button class="btn alt" id="learnBtn">How it works</button>
+    </div>
+  </div>
+</main>
+
+
+<section id="destinations" class="wrap-section">
+  <div class="wrap">
+    <div class="reveal" style="max-width:900px; margin:0 auto 18px; text-align:center">
+      <h2 style="margin:0 0 6px">Featured Destinations</h2>
+      <p class="muted">Hand-picked places we recommend this season. Quick visuals to feel the vibe.</p>
+    </div>
+
+    <div class="dest-grid reveal" aria-live="polite" id="destGrid">
+      <article class="dest-card" tabindex="0" role="button" aria-pressed="false">
+        <div class="dest-thumb"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=60" alt="Tropical beach"></div>
+        <div class="dest-meta">
+          <div class="kicker">Tropical</div>
+          <div class="dest-title">Maldives Escape</div>
+          <div class="dest-desc">Overwater bungalows, turquoise lagoons and private island dinners.</div>
+        </div>
+      </article>
+
+      <article class="dest-card" tabindex="0" role="button">
+        <div class="dest-thumb"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=60" alt="Mountain peaks"></div>
+        <div class="dest-meta">
+          <div class="kicker">Mountains</div>
+          <div class="dest-title">Swiss Alps Retreat</div>
+          <div class="dest-desc">Chalets, alpine hikes and gourmet fondue evenings.</div>
+        </div>
+      </article>
+
+      <article class="dest-card" tabindex="0" role="button">
+        <div class="dest-thumb"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=60" alt="City skyline"></div>
+        <div class="dest-meta">
+          <div class="kicker">City</div>
+          <div class="dest-title">Tokyo Lights</div>
+          <div class="dest-desc">Neon nights, culinary journeys and curated city passes.</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="packages" class="wrap-section" aria-label="Packages">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center; margin-bottom:12px">
+      <h2>Popular Packages</h2>
+      <p class="muted">Flexible offers — book with confidence or customize with us.</p>
+    </div>
+
+    <div class="carousel reveal" style="margin-top:10px">
+      <div class="carousel-track" id="packageTrack" aria-live="polite">
+        <article class="package" role="article">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=60" alt="Maldives package">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div><div class="kicker">7 days</div><div style="font-weight:800">Maldives Luxury</div></div>
+            <div style="text-align:right"><div style="font-weight:800;color:var(--accent)">2,499 Rs.</div><div class="muted">per person</div></div>
+          </div>
+          <p class="muted" style="margin-top:10px">All-inclusive, airport transfers, snorkeling and private dinner.</p>
+        </article>
+
+        <article class="package" role="article">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=60" alt="Alps package">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div><div class="kicker">5 days</div><div style="font-weight:800">Alps Winter</div></div>
+            <div style="text-align:right"><div style="font-weight:800;color:var(--accent)">1,399 Rs.</div><div class="muted">per person</div></div>
+          </div>
+          <p class="muted" style="margin-top:10px">Ski passes, chalet stay and guided slopes for all levels.</p>
+        </article>
+
+        <article class="package" role="article">
+          <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=60" alt="Tokyo package">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div><div class="kicker">6 days</div><div style="font-weight:800">Tokyo Essentials</div></div>
+            <div style="text-align:right"><div style="font-weight:800;color:var(--accent)">1,099 Rs.</div><div class="muted">per person</div></div>
+          </div>
+          <p class="muted" style="margin-top:10px">Culinary tour, transit passes & curated city experiences.</p>
+        </article>
+
+      </div>
+
+      <div class="carousel-controls" style="margin-top:12px; justify-content:flex-end">
+        <button class="btn alt" id="prevPackage">Prev</button>
+        <button class="btn" id="nextPackage">Next</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="wrap-section">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center; margin-bottom:18px">
+      <h2>Why Choose Wanderly</h2>
+      <p class="muted">We craft journeys that feel personal — comfort, authenticity and local connection.</p>
+    </div>
+
+    <div class="grid-3 reveal">
+      <div class="reason">
+        <div style="font-size:28px; margin-bottom:8px">🚩</div>
+        <div style="font-weight:700">Local Experts</div>
+        <div class="muted" style="margin-top:8px">On-ground guides and vetted partners ensure authentic experiences.</div>
+      </div>
+      <div class="reason">
+        <div style="font-size:28px; margin-bottom:8px">🛡️</div>
+        <div style="font-weight:700">Book with Confidence</div>
+        <div class="muted" style="margin-top:8px">Flexible cancellations and 24/7 support during your trip.</div>
+      </div>
+      <div class="reason">
+        <div style="font-size:28px; margin-bottom:8px">♻️</div>
+        <div style="font-weight:700">Sustainable Travel</div>
+        <div class="muted" style="margin-top:8px">We prioritize low-impact options and local communities.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="wrap-section">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center; margin-bottom:18px">
+      <h2>What Travelers Say</h2>
+    </div>
+
+    <div style="overflow:hidden">
+      <div class="testi-track reveal" id="testiTrack" style="padding-bottom:8px">
+        <div class="testi">
+          <div style="font-weight:800">"A magical trip — seamless from start to finish."</div>
+          <div class="muted" style="margin-top:8px">— Priya, India</div>
+        </div>
+        <div class="testi">
+          <div style="font-weight:800">"Wanderly's attention to detail made our honeymoon unforgettable."</div>
+          <div class="muted" style="margin-top:8px">— Mark & Ellen, USA</div>
+        </div>
+        <div class="testi">
+          <div style="font-weight:800">"Local guides were incredible — we felt like explorers, not tourists."</div>
+          <div class="muted" style="margin-top:8px">— Kenji, Japan</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="wrap-section">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center; margin-bottom:18px">
+      <h2>Get in Touch</h2>
+      <p class="muted">Tell us where you want to go — we'll take care of the details.</p>
+    </div>
+
+    <div class="contact reveal">
+      <div style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:12px">
+        <h3 style="margin-top:0">Plan a Trip</h3>
+        <p class="muted">Fast inquiry — we'll reply within 24 hours.</p>
+        <ul style="list-style:none; padding-left:0; margin-top:12px" class="muted">
+          <li>• Tailored itineraries</li>
+          <li>• Private guides & transfers</li>
+          <li>• Sustainable options & local meals</li>
+        </ul>
+      </div>
+
+      <form id="contactForm" aria-label="Contact form" onsubmit="return false;">
+        <label for="name" style="display:block; text-align: left; margin-bottom: 4px;">Name</label>
+        <input id="name" name="name" required placeholder="Your name" />
+
+        <label for="email" style="display:block; text-align: left; margin-bottom: 4px;">Email</label>
+        <input id="email" type="email" name="email" required placeholder="you@domain.com" />
+
+        <label for="message" style="display:block; text-align: left; margin-bottom: 4px;">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your dream trip..."></textarea>
+
+        <button class="btn" id="sendBtn" type="submit">Send Inquiry</button>
+      </form>
+    </div>
+
+    <footer class="sitefoot reveal">
+      <div class="muted">© <span id="year"></span> Wanderly • Crafted with care</div>
+    </footer>
+  </div>
+</section>
+
+<script>
+  /* ===== Basic interactivity & animations ===== */
+
+  // Typewriter text for hero
+  const phrases = ["Tropical escapes.", "Mountain retreats.", "City adventures."];
+  const typeEl = document.getElementById('typewriter');
+  let pIndex = 0, chIndex = 0, deleting = false;
+  function tick() {
+    const full = phrases[pIndex];
+    typeEl.textContent = full.slice(0, chIndex);
+    if (!deleting) {
+      chIndex++;
+      if (chIndex > full.length) { deleting = true; setTimeout(tick, 1200); return; }
+    } else {
+      chIndex--;
+      if (chIndex < 0) { deleting = false; pIndex = (pIndex+1) % phrases.length; setTimeout(tick, 400); return; }
+    }
+    setTimeout(tick, deleting ? 60 : 90);
+  }
+  tick();
+
+  // MODIFICATION: Removed the play/pause video logic as it's no longer needed.
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
+      // hide mobile menu if open
+      closeMobileMenu();
+    });
+  });
+
+  // Mobile menu toggle
+  const hamb = document.getElementById('hamburger'), mobileMenu = document.getElementById('mobileMenu');
+  hamb.addEventListener('click', () => {
+    const expanded = hamb.getAttribute('aria-expanded') === 'true';
+    hamb.setAttribute('aria-expanded', !expanded);
+    if (!expanded) openMobileMenu(); else closeMobileMenu();
+  });
+  function openMobileMenu(){ mobileMenu.style.display='block'; mobileMenu.setAttribute('aria-hidden','false') }
+  function closeMobileMenu(){ mobileMenu.style.display='none'; mobileMenu.setAttribute('aria-hidden','true'); hamb.setAttribute('aria-expanded','false') }
+
+  // Simple packages carousel logic
+  const track = document.getElementById('packageTrack');
+  const prevBtn = document.getElementById('prevPackage'), nextBtn = document.getElementById('nextPackage');
+  let pos = 0;
+  const step = 340; // approximate card + gap
+  prevBtn.addEventListener('click', ()=> { pos = Math.min(pos + step, 0); track.style.transform = `translateX(${pos}px)`; resetPackageAuto(); });
+  nextBtn.addEventListener('click', ()=> { pos = Math.max(pos - step, - (track.scrollWidth - track.clientWidth)); track.style.transform = `translateX(${pos}px)`; resetPackageAuto(); });
+
+  // Auto-advance packages
+  let packInterval = setInterval(()=> { nextBtn.click(); }, 4500);
+  function resetPackageAuto(){ clearInterval(packInterval); packInterval = setInterval(()=> nextBtn.click(), 4500); }
+
+  // Testimonials auto-rotate
+  const testi = document.getElementById('testiTrack');
+  let testiPos = 0;
+  setInterval(()=> {
+    testiPos -= 320;
+    if (Math.abs(testiPos) > (testi.scrollWidth - testi.clientWidth)) testiPos = 0;
+    testi.style.transform = `translateX(${testiPos}px)`;
+  }, 4800);
+
+  // IntersectionObserver for reveal animations
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if (e.isIntersecting) { e.target.classList.add('in-view'); e.target.classList.remove('reveal'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Contact form demo submission + validation
+  document.getElementById('contactForm').addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if (!name || !email || !message) { alert('Please fill all fields.'); return; }
+    document.getElementById('sendBtn').textContent = 'Sending…';
+    setTimeout(()=> {
+      alert('Thanks — we received your inquiry (demo). Replace with a real endpoint to process submissions.');
+      document.getElementById('sendBtn').textContent = 'Send Inquiry';
+      document.getElementById('contactForm').reset();
+    }, 900);
+  });
+
+  // Set year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Simple keyboard control for carousel (left/right)
+  document.addEventListener('keydown', (e)=> {
+    if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') return;
+    if (e.key === 'ArrowRight') nextBtn.click();
+    if (e.key === 'ArrowLeft') prevBtn.click();
+  });
+</script>
+</body>
+</html>
